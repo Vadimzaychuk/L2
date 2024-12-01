@@ -1,5 +1,5 @@
-// eslint.config.js
 import vue from 'eslint-plugin-vue';
+import vueParser from 'vue-eslint-parser';
 
 export default [
   {
@@ -11,6 +11,7 @@ export default [
       vue, // Плагін для Vue
     },
     languageOptions: {
+      parser: vueParser, // Парсер для Vue
       parserOptions: {
         ecmaVersion: 'latest', // Сучасна версія ECMAScript
         sourceType: 'module',
