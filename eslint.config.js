@@ -18,7 +18,7 @@ export default [
       },
     },
     rules: {
-      // Вимкніть проблемне правило
+      // Вимкнути проблемне правило
       'vue/no-unused-vars': 'off',
       'no-console': 'warn',
       'no-debugger': 'error',
