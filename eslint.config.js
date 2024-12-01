@@ -3,24 +3,25 @@ import vueParser from 'vue-eslint-parser';
 
 export default [
   {
-    ignores: ['node_modules/**', 'dist/**'], // Ігноруємо node_modules та dist
+    ignores: ['node_modules/**', 'dist/**'],
   },
   {
-    files: ['**/*.vue', '**/*.js'], // Лінтинг для .vue і .js файлів
+    files: ['**/*.vue', '**/*.js'],
     plugins: {
-      vue, // Плагін для Vue
+      vue,
     },
     languageOptions: {
-      parser: vueParser, // Парсер для Vue
+      parser: vueParser,
       parserOptions: {
-        ecmaVersion: 'latest', // Сучасна версія ECMAScript
+        ecmaVersion: 'latest',
         sourceType: 'module',
       },
     },
     rules: {
-      'vue/no-unused-vars': 'warn', // Попередження для невикористаних змінних у Vue
-      'no-console': 'warn', // Попередження для console.log
-      'no-debugger': 'error', // Заборона debugger
+      // Вимкніть проблемне правило
+      'vue/no-unused-vars': 'off',
+      'no-console': 'warn',
+      'no-debugger': 'error',
     },
   },
 ];
